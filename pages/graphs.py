@@ -28,7 +28,8 @@ def records():
         scorel = testscore['40l']['record']['endcontext']['finalTime'] / 1000
         scorel_min = int(scorel) // 60
         scorel_sec = scorel % 60
-        col2.markdown("# " + str(scorel_min) + ":" + f'{scorel_sec:.3f}')
+        if scorel_sec < 10: col2.markdown("# " + str(scorel_min) + ":0" + f'{scorel_sec:.3f}')
+        else: col2.markdown("# " + str(scorel_min) + ":" + f'{scorel_sec:.3f}')
 
     if record_data.json()['data']['records']['blitz']['record'] == None: col3.markdown("# N/A")
     else: 
