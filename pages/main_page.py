@@ -19,7 +19,7 @@ with col1:
    st.write("[Github](https://github.com/atile4) \n\n"
             "[Instagram](https://www.instagram.com/atticusw4/)")
 
-img = Image.open("/workspaces/streamlit-aboutme/images/20230630_102443.jpg")
+img = Image.open("aboutme/images/20230630_102443.jpg")
 
 with col2:
    st.image(img.rotate(-90), use_column_width=True)
